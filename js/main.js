@@ -191,14 +191,13 @@
 					hide(hotClassesChange);
 				}
 			}, 5000)
-		//事件绑定
-		function addEvent(){
-			//tab切换
-            EventUtil.addHandler(classes,'click',function(event){
-            	var target=event.target;
-            	console.log(target);
-            	if (target.className == 'current') {
-					return;
+	    //事件绑定
+	    function addEvent(){
+	        //tab切换
+                EventUtil.addHandler(classes,'click',function(event){
+            	    var target=event.target;
+            	    if (target.className == 'current') {
+			   return;
 			     } else{
 			     	//按钮样式切换
 					classes.querySelector('.current').className = "";
@@ -236,18 +235,18 @@
 			})
 
 			//取消关注
-		    EventUtil.addHandler($('.m-header-followed').getElementsByTagName('span')[2], 'click', function() {
+		       EventUtil.addHandler($('.m-header-followed').getElementsByTagName('span')[2], 'click', function() {
 					showInline(toFollow);
 					hide(followed);
 
 			})
 			
 
-				//点击关闭登录框
+			//点击关闭登录框
 			EventUtil.addHandler(closeLoginTag, 'click', function() {
 					hide(mLogin);
 			})
-				//点击关闭顶部提示框并添加cookie
+			//点击关闭顶部提示框并添加cookie
 			EventUtil.addHandler(closeNoticeTag, 'click', function() {
 					hide(gNotice);
 					cookieUtil.CookieSetter("notice", "yes")
@@ -272,7 +271,7 @@
 			})
 
 
-	       //课程页码切换
+	               //课程页码切换
 			for (var i = 0; i < classesPageIndex.length; i++) {
 				classesPageIndex[i].id=i;
 				//var classesTypePages=Container.getElementsByClassName('classespages')
@@ -291,16 +290,15 @@
 				})
 
 			}
-         //向前切换
-
-		    EventUtil.addHandler(classesPageForward,'click',function(){
+                   //向前切换
+		   EventUtil.addHandler(classesPageForward,'click',function(){
 	        	 var curPageId=$('.m-classes-page').querySelector('.current').id;
 	        	if (curPageId<8) {
 	        		classesId(parseInt(curPageId)+1);
 	            }
             })
-        //向后切换
-            EventUtil.addHandler(classesPageBack,'click',function(){
+                  //向后切换
+                  EventUtil.addHandler(classesPageBack,'click',function(){
 	        	 var curPageId=$('.m-classes-page').querySelector('.current').id;
 	        	if (curPageId>0) {
 	        		classesId(parseInt(curPageId)-1);
