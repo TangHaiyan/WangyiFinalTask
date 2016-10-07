@@ -1,0 +1,880 @@
+
+/*样式分为三部分
+一、全局性的布局，颜色及字体
+=layout
+=color
+=font
+二、各局部样式设置
+=notice
+=header
+=products
+=enviroment
+=classes
+=foot
+三、两个单独模块轮播和登录框
+=slider
+=login
+可ctrl+F进行搜索维护
+
+
+/*=layout
+………………………………………………………………………………………………………………………………………………………………………………*/
+html,body{
+	width:1612px;
+}
+body{
+	background-color: #f8f8f8;
+}
+.g-notice{
+	position: relative;
+	height: 36px;
+	width: 100%;
+}
+.g-header{
+	position: relative;
+	margin: 30px 12% 38px;
+	height: 22px;
+}
+
+.g-banner {
+	position: relative;
+	width:100%;
+    height: 440px;
+}
+.g-products{
+	margin: 60px 12%;
+}
+.g-products .m-products-list{
+	margin-left:-60px;
+}
+.g-products .m-products-list li{
+	float: left;
+	width: 33%;
+	padding-left: 60px;
+	box-sizing: border-box;
+}
+.g-products .m-products-list li .m-products-list-class-intro{
+	margin-left: 100px;
+}
+.g-products .m-products-list-class{
+	margin-top:10px;
+	float: left;
+    width:80px;
+    height: 80px;   
+}
+
+
+.g-environment{
+	width: 100%;
+	height: 223px;
+	margin-left: -4px;
+
+}
+
+.g-classes{
+	position: relative;
+	margin:82px 12% 0;
+}
+.g-classes .m-classes{
+	margin-right: 226px;
+ }
+.g-classes .m-classes-main{
+	position: relative;
+}
+.g-classes .m-classes-main ul{
+	display: inline-block;
+    width: 400px;
+}
+.g-classes .m-classes-side{
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 226px;	
+}
+
+.g-foot{
+	margin-top: 120px;
+	width: 100%;
+	height: 262px;
+}
+
+
+/*=color
+………………………………………………………………………………………………………………………………………………………………………………*/
+.g-notice{
+	background-color: #f3f3f3;
+
+}
+.g-notice .m-notice-info a{
+	color: #21a557;
+}
+.g-header .m-header-tofollow-son{
+	color: #fff;
+}
+.g-classes .m-classes-main .m-classes-page i:hover{
+	color: #fff;
+	 background-color: #9dd8b1;
+}
+.g-classes .m-classes-main ul li.current{
+	color: #fff;
+}
+.g-header .m-header-followed span:nth-child(3):hover{
+	color:#39a030;
+}
+
+.g-header .m-header-products-list li a:hover{
+	color:#39a030;
+}
+.g-products .m-products-list li a{
+	color:#39a030;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description:hover h4{
+	color:#39a030;
+}
+.g-classes .m-classes-main .m-classes-page i.current{
+	color:#39a030;
+}
+
+.g-foot .m-foot-main .m-foot-logo h1{
+	color:#39a030;
+}
+
+.g-header .m-header-followed span:nth-child(3){
+	color: #999;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .author{
+	color: #999;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .num{
+	color: #999;
+}
+.g-classes .m-classes-side .m-classes-hot .hotclasses .hot-classes-title .num{
+	color: #999;
+}
+
+
+.g-classes .m-classes-main .m-classes-page .back{
+    background-color: #9dd8b1;
+}
+
+.g-classes .m-classes .m-classes-son .m-classes-description .price{
+	color: #ff3f00;
+}
+.g-foot{
+	background-color: #2c3339;
+}
+.g-foot,.g-foot ul li a{
+	color: #bebfc0;
+}
+.m-classes-detail{
+	background-color: #fff;
+}
+.g-classes .m-classes-main ul li.current{
+	background-color:#39a030;
+}
+/*=font
+………………………………………………………………………………………………………………………………………………………………………………*/
+.g-notice{
+	font: 12px/36px "Microsoft YaHei";
+}
+.g-header .m-header-logo h1,.g-products .m-products-list li h2,.g-foot .m-foot-main .m-foot-logo h1{
+	font-size:20px;
+}
+.g-products .m-products-list li p,.g-products .m-products-list li a,.g-foot .m-foot-side ul li,.m-classes-detail div+p{
+   	font-size:15px;
+}
+
+.g-classes .m-classes-side .m-classes-hot .hotclasses .hot-classes-title .num{
+	font-size: 9px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description h4,.g-classes .m-classes-side .m-classes-video p{
+	font-size: 14px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .author,.g-classes .m-classes .m-classes-son .m-classes-description .price{
+	font-size: 10px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .num{
+	font-size: 8px;
+}
+
+.g-classes .m-classes-side .intro{
+	font-size: 16px;
+}
+
+.m-classes-detail div div h4{
+	font-size: 18px
+}
+.m-classes-detail div div p{
+	font-size: 12px;
+}
+
+/*/*=notice
+…………………………………………………………………………………………………………………………………………………………………………………*/
+.g-notice .m-notice-info{	
+	margin-left: 12%;
+}
+.g-notice .m-notice-no{
+	position: absolute;
+	top: 0;
+	right: 12%;
+}
+
+.g-notice .m-notice-info a{
+	margin-left: 10px;
+}
+.g-notice .m-notice-info a span{
+	display:inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../pic/smalllogo.png) no-repeat 0 -38px;
+    background-size: 50px;	
+}
+
+.g-notice .m-notice-no span{
+	display:inline-block;
+	margin-right: 6px;
+    width: 12px;
+    height: 12px;
+    background: url(../pic/smalllogo.png) no-repeat -37px 0px;
+    background-size: 50px;
+    vertical-align: middle;
+}
+
+/*=header
+…………………………………………………………………………………………………………………………………………………………………………………*/
+.g-header .m-header-products,.g-header .m-header-products .m-header-products-list,.g-header .m-header-products .m-header-products-list li,.g-header .m-header-products .m-header-search,.g-header .m-header-tofollow-son,.g-header .m-header-tofollow-son .m-header-tofollow-charac span{
+	display: inline-block;
+}
+.g-header .m-header-logo img,.g-header .m-header-logo img.m-header-logo {
+	vertical-align: text-bottom;
+}
+.g-header .m-header-logo,.g-header .m-header-logo span,.g-header .m-header-logo h1,.g-header .m-header-tofollow,.g-header .m-header-followed{
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+.g-header .m-header-logo img.m-header-logo{
+	margin-right: 12px;
+	height: 18px;
+}
+
+.g-header .m-header-logo span{
+	padding:8px 5px;
+	margin-left: 10px;
+	border-left: 2px solid #39a030;
+}
+.g-header .m-header-logo h1{
+	bottom: 0;
+}
+
+.g-header .m-header-tofollow-son{
+    margin-left: 30px;
+    padding: 3px 6px;
+    border: 1px solid #39a030;
+    border-radius: 3px;
+    background-color: #39a030;
+    cursor: pointer;
+}
+.g-header .m-header-tofollow-son .m-header-tofollow-charac span{
+	padding-right: 2px;
+    width: 10px;
+	height: 10px;
+	background: url(../pic/smalllogo.png) no-repeat -40px -20px;
+}
+
+.g-header .m-header-tofollow .m-header-follower span:nth-child(1){
+	margin:0 6px 0 12px;
+}
+.g-header .m-header-followed{
+	height: 18px;
+	border: 1px solid #efefef;
+	border-radius: 3px;
+}
+
+.g-header .m-header-followed {
+	margin-left: 30px;
+	line-height: 20px;
+}
+.g-header .m-header-followed span:nth-child(1){
+	display: inline-block;	
+	margin-left: 5px;
+	width: 15px;
+	height: 12px;
+	background: url(../pic/smalllogo.png) no-repeat -38px -38px;
+}
+
+.g-header .m-header-followed span:nth-child(2){
+	vertical-align: middle;
+	padding: 5px 4px 5px;
+	margin-left:8px;
+	border-left:1px solid #999;
+	font-size: 0;
+}
+.g-header .m-header-followed span:nth-child(3){
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.g-header .m-header-followed span:nth-child(3):hover{
+	text-decoration: underline;
+}
+
+.g-header .m-header-products{
+	position: absolute;
+	right:16px;
+	font-size: 16px;
+	line-height: 22px;
+}
+.g-header .m-header-search{
+	height:20px; 
+	width:20px;
+	background: url(../pic/search.png) no-repeat -21px 0;
+}
+.g-header .m-header-search:hover{
+	background: url(../pic/search.png) no-repeat 0 0;
+}
+.g-header .m-header-products-list li{
+	margin-right: 30px;
+}
+
+/*=products
+…………………………………………………………………………………………………………………………………………………………………………………*/
+
+.g-products .m-products-list li p{
+    margin-bottom: 34px;
+    overflow: hidden;
+	line-height: 25px;
+}
+.g-products .m-products-list li span{
+    display:inline-block;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px;
+    background: url(../pic/smalllogo.png) no-repeat 0 -65px;
+    background-size: 80px;
+  
+}
+
+.g-products .m-products-list li h2{
+	margin-bottom: 22px;
+	width:150px;
+	overflow: hidden;
+}
+.g-products .m-products-list li a:hover{
+	text-decoration: underline;
+}
+
+.g-products .m-products-list-openclass .openclass{
+    background: url(../pic/productlogo.png) no-repeat 0 -90px;
+}
+
+.g-products .m-products-list-yunclass .yunclass{
+    background: url(../pic/productlogo.png) no-repeat 0 00px;
+}
+
+.g-products .m-products-list-moocclass .moocclass{
+    background: url(../pic/productlogo.png) no-repeat 0 -180px;
+}
+
+/*=environment
+………………………………………………………………………………………………………………………………………………………………………………*/
+.g-environment div{
+	float: left;
+	padding-left: 4px;
+	width: 20%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+/*=classes
+………………………………………………………………………………………………………………………………………………………………………………*/
+
+.g-classes .m-classes-main ul{
+	display: inline-block;
+	margin-bottom: 30px;
+	font-size:20px;
+    border:1px solid #d4d3d3;
+    width: 400px;
+}
+
+.g-classes .m-classes-main ul li{
+	display: inline-block;
+	padding: 13px 0;
+	width: 197px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.g-classes .m-classes .m-classes-son{
+	position: relative;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description{
+	width: 224px;
+	margin-right: 20px;
+  }	
+.g-classes .m-classes .classespages .m-classes-son{
+  float: left;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description{
+	display: inline-block;
+	box-sizing: border-box;
+	border: 1px solid #f1f1f1;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description:hover{
+	border: 1px solid #e6e6e6;
+}
+.g-classes .m-classes .m-classes-son:hover .m-classes-detail{
+	display: inline-block;
+}
+
+
+
+/*@media screen and (min-width:1205px) and (max-width: 1550px){
+ 
+    .g-classes .m-classes .m-classes-son{
+		margin-right: 1%;
+  }	
+}
+@media screen and (max-width:1205px) and (min-width: 1000px) {
+    .g-classes .m-classes .m-classes-son{
+    margin-right: .8%;
+  }	
+}
+*/
+
+.g-classes .m-classes .m-classes-son .m-classes-description img{
+	margin-bottom: 10px;
+    width: 222px;
+    height: 124px;
+}
+
+.g-classes .m-classes .m-classes-son .m-classes-description h4{
+	margin:10px 0 10px 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .author{
+	margin:0 0 10px 5px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .num{
+	margin:0 0 10px 5px;
+	width: 60px;
+	height: 18px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	line-height: 18px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .price{
+	margin:0 0 10px 5px;
+}
+.g-classes .m-classes .m-classes-son .m-classes-description .num span{
+	display:inline-block;
+	margin-right: 6px;
+    width: 12px;
+    height: 12px;
+    background: url(../pic/smalllogo.png) no-repeat 0px -2px;
+    background-size: 50px;
+    vertical-align: middle;
+}
+
+.g-classes .m-classes-side{
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 226px;	
+}
+.g-classes .m-classes-side .all-hotclasses img{
+	width: 50px;
+	height: 50px;
+}
+.g-classes .m-classes-side .m-classes-intro,.g-classes .m-classes-side .m-classes-hot{
+	border:1px solid #ddd;
+}
+
+.g-classes .m-classes-side .intro{
+	padding-left: 22px;
+	height: 56px;
+	line-height: 56px;
+	border-bottom:1px solid #ddd;
+}
+.g-classes .m-classes-side .m-classes-video{
+	height: 172px;
+	border-bottom:1px solid #ddd;
+}
+.g-classes .m-classes-side .m-classes-video p{
+	padding:20px 0 10px 22px;
+	width: 100%;
+}
+
+.g-classes .m-classes-side .m-classes-video img{
+	padding-left: 22px;
+	width:180px;
+	height: 110px;
+	cursor: pointer;
+	
+}
+.g-classes .m-classes-side .m-classes-video .play{
+     display: none;
+     position: fixed;
+     z-index: 100;
+	  bottom: 50%;
+	  right: 50%;
+	  transform: translate(50%,50%);
+	  margin-left: -360px\0;
+	  margin-top: 220px\0;
+	  width:770px; 
+	  height:490px;
+	  background-color: #fff;
+
+}
+.g-classes .m-classes-side .m-classes-video .play video{
+    position: absolute;
+    width:720px;
+    height: 440px;
+    left: 0;
+    margin:25px 25px;
+    padding-left: 0; 
+}
+.g-classes .m-classes-side .m-classes-video .play span{
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 15px;
+    height: 15px;
+    background: url(../pic/smalllogo.png) no-repeat -37px 0px;
+    background-size: 50px;
+}
+
+.g-classes .m-classes-side .m-classes-hot h3{
+	padding: 14px 0 10px 22px;
+	border-bottom:1px solid #ddd;
+}
+.g-classes .m-classes-side .m-classes-hot {
+	margin-top: 20px;
+}
+.g-classes .m-classes-side .m-classes-hot .hotclasses{
+	padding:20px 0 0 22px;
+}
+.g-classes .m-classes-side .m-classes-hot img{
+	float: left;
+
+}
+
+.g-classes .m-classes-side .m-classes-hot .hotclasses .hot-classes-title{
+	margin-left: 62px;
+}
+
+.g-classes .m-classes-side .m-classes-hot .hotclasses .hot-classes-title h4{
+	margin-bottom: 12px; 
+	width: 112px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.g-classes .m-classes-side .m-classes-hot .hotclasses .hot-classes-title span{
+	display:inline-block;
+	margin-right: 6px;
+    width: 12px;
+    height: 12px;
+    background: url(../pic/smalllogo.png) no-repeat 0px -2px;
+    background-size: 50px;
+    vertical-align: middle;
+}
+.g-classes .m-classes-main{
+	position: relative;
+}
+.g-classes .m-classes-main .m-classes-page{
+	position: absolute;
+	right: 270px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+.g-classes .m-classes-main .m-classes-page .forward,.g-classes .m-classes-main .m-classes-page .back{
+	padding: 3px 9px;
+	background-color: #9dd8b1
+}
+.g-classes .m-classes-main .m-classes-page span span{
+	display:inline-block;
+	width: 12px;
+    height: 12px;
+    background-size: 50px;
+    vertical-align: middle;
+}
+.g-classes .m-classes-main .m-classes-page .back span {
+    background: url(../pic/smalllogo.png) no-repeat 0px -60px;
+}
+.g-classes .m-classes-main .m-classes-page .forward span {
+	margin-right: 9px;
+    background: url(../pic/smalllogo.png) no-repeat -40px -60px;
+}
+
+.g-classes .m-classes-main .m-classes-page i{
+	display: inline-block;
+	padding: 3.5px 0;
+	margin:0 2px;
+	width: 20px;
+	text-align: center;
+	cursor:pointer;
+}
+
+.m-classes-detail{
+	display: none;
+	position: absolute;
+	top:0;
+	left: 244px;
+	width: 464px;
+	height: 266px;
+	border:2px solid #e6e6e6;
+	z-index: 9999;
+}
+.m-classes-detail div div{
+	vertical-align: top;
+	margin-left: 240px;
+
+}
+.m-classes-detail img{
+	float: left;
+	width: 222px;
+	height: 124px;
+
+}
+
+.m-classes-detail>div {
+	margin: 20px 20px;
+	z-index: 10000;
+}
+.m-classes-detail div div h4{
+	margin: 0 0 20px 0;
+	width: 210px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.m-classes-detail div div p{
+	margin: 10px 0;
+}
+.m-classes-detail div div p span{
+	display:inline-block;
+	margin-right: 6px;
+    width: 12px;
+    height: 12px;
+    background: url(../pic/smalllogo.png) no-repeat 0px -2px;
+    background-size: 50px;
+    vertical-align: middle;
+}
+.m-classes-detail div+p{
+	line-height: 30px;
+	margin-top: 45px;
+	height: 95px;
+	text-indent: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*=classes
+………………………………………………………………………………………………………………………………………………………………………………*/
+
+.g-foot .m-foot-main,.g-foot .m-foot-side,.g-foot .m-foot-chain,.g-foot .m-foot-about,.g-foot .m-foot-more{
+	display: inline-block;
+	vertical-align: top;
+}
+.g-foot .m-foot-main{
+	margin: 95px 148px 82px 255px;
+}
+.g-foot .m-foot-side{
+	margin-top: 80px;
+}
+.g-foot .m-foot-chain{
+	margin-right: 100px;
+}
+.g-foot .m-foot-about{
+	margin-right: 70px;
+}
+.g-foot .m-foot-main .m-foot-logo span{
+	padding: 15px 6px 2px;
+	margin-left: 12px;
+    border-left: 1px solid #39a030;
+    font-size: 0;
+
+}
+.g-foot .m-foot-main .m-foot-logo img{
+	vertical-align: text-bottom;
+}
+.g-foot .m-foot-main .m-foot-logo h1{
+	display: inline-block;
+	margin-bottom: 30px;
+}
+.g-foot .m-foot-side{
+	vertical-align: top;
+}
+.g-foot .m-foot-main p{
+	margin-bottom: 15px;
+}
+
+.g-foot .m-foot-side p{
+	margin-bottom: 14px;
+}
+.g-foot .m-foot-side ul li{
+	margin-bottom: 14px;
+}
+.g-foot .m-foot-side ul li:hover{
+	text-decoration: underline;
+
+}
+.g-foot .m-foot-side .m-foot-about span{
+	display:inline-block;
+	margin-left: 5px;
+	width: 20px;
+    height: 18px;
+    background-size: 50px;
+    vertical-align: middle;
+    background: url(../pic/smalllogo.png) no-repeat 0 -17px;
+}
+
+
+/*=slider
+…………………………………………………………………………………………………………………………………………………………………………………………*/
+/*.m-slider{*/
+  /*background-color: #fff;*/
+/*  position: relative;
+  height: 100%;
+  width: 100%;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+.m-slider, .m-slider .slide{
+  height: 100%;
+  width: 100%;
+}
+.m-slider .slide{
+  position: absolute;
+  display: block;
+  top:0;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+
+}
+
+.m-slider .slide.z-active{
+  transition: opacity .2s ease-in;
+}
+
+.m-slider .slide img{
+  border: 2px solid #fff;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px rgba(0,0,0, .5);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  max-width: 100%;
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+*/
+  /*.wrapper{position: relative;margin: 30px auto;width: 400px;height: 200px;}*/
+  .m-banner{width: 100%;height: 440px;overflow: hidden;}
+  .m-imgList{width:100%;height:440px;z-index: 10;}
+  .m-imgList img{display: none;}
+  .m-imgList .imgOn{display: inline;}
+  /*.indexList{position: absolute;right: 10px;bottom: 5px;z-index: 30;}
+  .indexList li{float: left;margin-right: 5px;padding: 2px 4px;border: 2px solid black;background: grey;cursor: pointer;}*/
+  /*.m-cursor .indexOn{background: red;font-weight: bold;color: white;}*/
+
+/*----Cursor------*/
+
+.m-cursor{
+  z-index: 11;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  padding-left: 0;
+}
+.m-cursor li{
+  width: 15px;
+  height: 15px;
+  color: #aaa;
+  line-height: 15px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  margin-right: 4px;
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color .5s;
+
+}
+.m-cursor li:hover, .m-cursor li.indexOn{
+  background-color: #999;
+  color: #fff;
+}
+/*.m-cursor li.prev, .m-cursor li.next{
+  font-family: '宋体';
+}
+*/
+
+/*=login
+…………………………………………………………………………………………………………………………………………………………………………………………………………………………*/
+.m-login{
+  position: fixed;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%,50%);
+  margin-left: -195px\0;
+  margin-top: 145px\0;
+  width:390px; 
+  height:290px;
+  background-color: #fff;
+
+}
+.m-login span{
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 12px;
+    height: 12px;
+    background: url(../pic/smalllogo.png) no-repeat -37px 0px;
+    background-size: 50px;
+}
+.m-login>div{
+  width: 75%;
+  height: 75%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.m-login div div .title {
+  width: 100%;
+  font: 20px/20px 'Microsoft Yahei';
+  margin-bottom: 10%;
+}
+
+.m-login div div input {
+  margin-bottom: 5%;
+  width: 100%;
+  height: 40px;
+  border-style: none;
+  border: 1px solid #dfdfdf;
+  font:15px/20px 'Microsoft Yahei';
+  text-indent: 6px;
+}
+
+.m-login .login-form .login{
+  margin-top: 5%;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #26ad49;
+  font: 16px "Microsoft Yahei";
+  color: #fff;
+  border-style: none;
+  background-color: #26ad49;
+}
