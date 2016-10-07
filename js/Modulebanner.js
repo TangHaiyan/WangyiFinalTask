@@ -1,5 +1,6 @@
 
 (function () {  
+       
        function getElementsByClassName(className) {
     var classArr = [];
     var tags = document.getElementsByTagName('*');
@@ -167,8 +168,6 @@
 
 
     window.Banner=Banner;
-
-//    this.container.appendChild(this.slider);
 
      
 })()
