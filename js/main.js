@@ -43,8 +43,8 @@
 			}
 		}
 
-		var UrlClasses = "http://study.163.com/webDev/couresByCategory.htm";
-		var UrlHot = "http://study.163.com/webDev/hotcouresByCategory.htm";
+		var UrlClasses = "https://study.163.com/webDev/couresByCategory.htm";
+		var UrlHot = "https://study.163.com/webDev/hotcouresByCategory.htm";
 		var TypeIndex;
 		var Container=$('.m-classes-PM');
 
@@ -316,7 +316,7 @@
 	         var form=document.forms[0];
 	         form.elements[0].value=MD5(name);
 	         form.elements[1].value=MD5(password);
-             var urlLogin="http://study.163.com/webDev/login.htm";
+             var urlLogin="https://study.163.com/webDev/login.htm";
 	         var optionsLog={
 	         	userName:MD5(name),
 	         	password:MD5(password),
